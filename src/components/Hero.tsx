@@ -5,6 +5,14 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-tan-light via-white to-sky/10 overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-burnt-orange/5 via-transparent to-navy/5"></div>
 
+      <div className="absolute top-6 left-6 md:top-10 md:left-10 z-20">
+        <img
+          src="/RGB_cgai_formal.png"
+          alt="Center for Generative AI - Machine Learning Laboratory"
+          className="h-12 md:h-16 lg:h-20 w-auto"
+        />
+      </div>
+
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="max-w-5xl mx-auto text-center">
           <div className="mb-8 inline-block">

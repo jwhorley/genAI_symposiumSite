@@ -73,10 +73,17 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="border-t border-white/20 pt-8 text-center text-tan-light text-sm">
-            <p>
-              &copy; {currentYear} Institute for Foundations of Machine Learning (IFML). All rights reserved.
-            </p>
+          <div className="pt-8">
+            <img
+              src="/UT-banner.png"
+              alt="The University of Texas at Austin - What Starts Here Changes the World"
+              className="w-full h-auto mb-6"
+            />
+            <div className="text-center text-tan-light text-sm">
+              <p>
+                &copy; {currentYear} Institute for Foundations of Machine Learning (IFML). All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </div>
