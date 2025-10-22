@@ -38,6 +38,14 @@ export default function About() {
               <h2 className="text-4xl md:text-5xl font-spartan font-bold text-slate-dark mb-6 leading-tight">
                 Celebrating 5 Years of IFML Innovation
               </h2>
+              <div className="mb-8">
+                <img
+                  src="/NSF-IFML_lockup.png"
+                  alt="NSF-IFML Logo"
+                  className="h-16 object-contain"
+                  loading="lazy"
+                />
+              </div>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
                   The Fall AI Research Symposium marks five years of groundbreaking work at the Institute for Foundations of Machine Learning (IFML). This special event brings together leading researchers to share perspectives on the most transformative developments in generative AI.
