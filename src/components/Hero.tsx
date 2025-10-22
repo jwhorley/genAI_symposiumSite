@@ -5,9 +5,9 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/texas landscape.png)' }}
+        style={{ backgroundImage: 'url("/texas landscape.png")' }}
       ></div>
-      <div className="absolute inset-0 bg-white/60"></div>
+      <div className="absolute inset-0 bg-white/40"></div>
 
       <div className="absolute top-6 left-6 md:top-10 md:left-10 z-20">
         <img
