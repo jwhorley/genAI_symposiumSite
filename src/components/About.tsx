@@ -36,7 +36,7 @@ export default function About() {
                 </p>
               </div>
               <h2 className="text-4xl md:text-5xl font-spartan font-bold text-slate-dark mb-6 leading-tight">
-                Celebrating 5 Years of IFML Innovation
+                Celebrating IFML's Renewal
               </h2>
               <div className="mb-8">
                 <img
