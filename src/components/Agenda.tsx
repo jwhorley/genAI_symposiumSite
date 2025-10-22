@@ -158,19 +158,9 @@ export default function Agenda() {
                         </div>
 
                         {session.speaker && (
-                          <div className="flex items-center justify-between gap-4">
-                            <div className="flex items-center gap-2 text-sm text-gray-600">
-                              <User className="w-4 h-4 text-burnt-orange" />
-                              <span>{session.speaker}</span>
-                            </div>
-                            {session.logo && (
-                              <img
-                                src={session.logo}
-                                alt={session.affiliation}
-                                className="h-8 object-contain"
-                                title={session.affiliation}
-                              />
-                            )}
+                          <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <User className="w-4 h-4 text-burnt-orange" />
+                            <span>{session.speaker}</span>
                           </div>
                         )}
                       </div>
@@ -188,7 +178,17 @@ export default function Agenda() {
 
                 {expandedSession === index && (
                   <div className="px-6 pb-6 border-t-2 border-tan-light pt-4">
-                    <p className="text-gray-700 leading-relaxed">{session.description}</p>
+                    <div className="flex items-start justify-between gap-4">
+                      <p className="text-gray-700 leading-relaxed flex-grow">{session.description}</p>
+                      {session.logo && (
+                        <img
+                          src={session.logo}
+                          alt={session.affiliation}
+                          className="h-12 object-contain flex-shrink-0"
+                          title={session.affiliation}
+                        />
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
