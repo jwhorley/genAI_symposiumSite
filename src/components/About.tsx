@@ -59,15 +59,18 @@ export default function About() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-burnt-orange/20 to-navy/20 rounded-3xl transform rotate-3"></div>
-              <div className="relative bg-white p-8 rounded-2xl shadow-xl border-4 border-burnt-orange">
-                <img
-                  src="/longhornONLY_Generative AI Workshop 2025  5x7.png"
-                  alt="Longhorn"
-                  className="w-full h-auto rounded-lg"
-                  loading="lazy"
-                />
+            <div className="relative flex justify-center">
+              <div className="relative w-3/4 max-w-md">
+                <div className="absolute inset-0 bg-gradient-to-br from-burnt-orange/20 to-navy/20 rounded-3xl transform rotate-3"></div>
+                <div className="relative bg-white p-6 rounded-2xl shadow-xl border-4 border-burnt-orange overflow-hidden">
+                  <img
+                    src="/longhornONLY_Generative AI Workshop 2025  5x7.png"
+                    alt="Longhorn"
+                    className="w-full h-auto rounded-lg object-cover object-center"
+                    style={{ objectPosition: '50% 40%' }}
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
