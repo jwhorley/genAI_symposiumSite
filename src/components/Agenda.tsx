@@ -184,7 +184,7 @@ export default function Agenda() {
                         <img
                           src={session.logo}
                           alt={session.affiliation}
-                          className="h-12 object-contain flex-shrink-0"
+                          className={`object-contain flex-shrink-0 ${session.affiliation === 'Cisco Foundation AI' ? 'h-8' : 'h-12'}`}
                           title={session.affiliation}
                         />
                       )}
