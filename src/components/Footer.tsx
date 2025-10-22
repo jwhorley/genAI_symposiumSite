@@ -13,7 +13,7 @@ export default function Footer() {
                 Fall AI Research Symposium
               </h3>
               <p className="text-tan-light leading-relaxed">
-                Celebrating IFML's 5-year anniversary with a day of cutting-edge research presentations and engaging discussions on the future of generative AI.
+                Celebrating IFML's 5-year anniversary with a day of thought provoking research presentations and engaging discussions on the future of generative AI.
               </p>
             </div>
 
