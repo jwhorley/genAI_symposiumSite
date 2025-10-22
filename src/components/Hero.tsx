@@ -32,7 +32,7 @@ export default function Hero() {
             <div className="hidden sm:block w-1 h-1 rounded-full bg-burnt-orange"></div>
             <div className="flex items-center gap-2 text-slate-dark">
               <MapPin className="w-5 h-5 text-burnt-orange" />
-              <span className="font-medium">EER, Austin, TX</span>
+              <span className="font-medium">Mulva Auditorium | EER, Austin, TX</span>
             </div>
           </div>
 
