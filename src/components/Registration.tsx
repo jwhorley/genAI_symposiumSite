@@ -108,7 +108,7 @@ export default function Registration() {
             <div className="mt-8 pt-8 border-t border-tan-medium text-center">
               <p className="text-gray-600 text-sm">
                 Questions about registration?{' '}
-                <a href="mailto:info@ifml.institute" className="text-burnt-orange font-semibold hover:underline">
+                <a href="mailto:rrice@utexas.edu" className="text-burnt-orange font-semibold hover:underline">
                   Contact us
                 </a>
               </p>
