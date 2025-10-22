@@ -10,10 +10,10 @@ export default function Footer() {
           <div className="grid md:grid-cols-3 gap-12 mb-8">
             <div>
               <h3 className="font-spartan font-bold text-2xl mb-4 text-burnt-orange">
-                Generative AI Workshop
+                Fall AI Research Symposium
               </h3>
               <p className="text-tan-light leading-relaxed">
-                Join us for two days of cutting-edge research, practical workshops, and meaningful connections in the generative AI community.
+                Celebrating IFML's 5-year anniversary with a day of cutting-edge research presentations and engaging discussions on the future of generative AI.
               </p>
             </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@genaiworkshop.com" className="text-tan-light hover:text-burnt-orange transition-colors">
+                  <a href="mailto:info@ifml.institute" className="text-tan-light hover:text-burnt-orange transition-colors">
                     Contact Us
                   </a>
                 </li>
@@ -63,7 +63,7 @@ export default function Footer() {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="mailto:info@genaiworkshop.com"
+                  href="mailto:info@ifml.institute"
                   className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
                   aria-label="Email"
                 >
@@ -75,7 +75,7 @@ export default function Footer() {
 
           <div className="border-t border-white/20 pt-8 text-center text-tan-light text-sm">
             <p>
-              &copy; {currentYear} Generative AI Workshop. All rights reserved.
+              &copy; {currentYear} Institute for Foundations of Machine Learning (IFML). All rights reserved.
             </p>
           </div>
         </div>

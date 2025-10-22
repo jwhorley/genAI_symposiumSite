@@ -3,23 +3,23 @@ import { Brain, Sparkles, Target, Zap } from 'lucide-react';
 const highlights = [
   {
     icon: Brain,
-    title: 'Deep Technical Insights',
-    description: 'Explore the latest research in foundation models, multimodal AI, and emerging architectures',
+    title: 'Foundation Models',
+    description: 'Explore cutting-edge research in large language models, optimization, and fine-tuning strategies',
   },
   {
     icon: Sparkles,
-    title: 'Practical Applications',
-    description: 'Real-world case studies across healthcare, science, creative industries, and enterprise',
+    title: 'Diffusion & Vision',
+    description: 'Latest advances in diffusion models, computer vision, and multimodal AI systems',
   },
   {
     icon: Target,
-    title: 'Responsible Development',
-    description: 'Address ethics, bias mitigation, safety alignment, and governance frameworks',
+    title: 'Scientific Applications',
+    description: 'AI-driven breakthroughs in protein research, biological discovery, and scientific domains',
   },
   {
     icon: Zap,
-    title: 'Hands-on Experience',
-    description: 'Interactive workshops covering prompt engineering, fine-tuning, and deployment strategies',
+    title: 'Future of AI',
+    description: 'Panel discussions on controversial topics, emerging capabilities, and the path forward',
   },
 ];
 
@@ -32,21 +32,21 @@ export default function About() {
             <div>
               <div className="inline-block bg-burnt-orange px-4 py-2 rounded-full mb-6">
                 <p className="text-white font-spartan font-bold text-sm uppercase tracking-wide">
-                  About the Workshop
+                  About the Symposium
                 </p>
               </div>
               <h2 className="text-4xl md:text-5xl font-spartan font-bold text-slate-dark mb-6 leading-tight">
-                Advancing the Frontier of Generative AI
+                Celebrating 5 Years of IFML Innovation
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  The Generative AI Workshop 2025 brings together the brightest minds in artificial intelligence to explore the transformative potential of generative models. From large language models to multimodal systems, we're witnessing a paradigm shift in how machines understand and create.
+                  The Fall AI Research Symposium marks five years of groundbreaking work at the Institute for Foundations of Machine Learning (IFML). This special event brings together leading researchers to share perspectives on the most transformative developments in generative AI.
                 </p>
                 <p>
-                  This two-day intensive conference features keynote presentations from industry pioneers, hands-on technical workshops, panel discussions on responsible AI development, and unparalleled networking opportunities with researchers and practitioners shaping the future of the field.
+                  Join us for a full day of research presentations covering foundation models, diffusion techniques, vision systems, and protein research. Hear from distinguished speakers including Amin Karbasi, Vahab Mirrokni, Kristen Grauman, and other pioneers shaping the field.
                 </p>
                 <p>
-                  Whether you're conducting cutting-edge research, building production systems, or exploring new applications, this workshop offers the knowledge, connections, and inspiration to accelerate your work in generative AI.
+                  The symposium culminates in a thought-provoking panel discussion on controversial and emerging topics in AI, offering a unique opportunity to engage with the critical questions facing our community. Free event with breakfast and lunch provided.
                 </p>
               </div>
             </div>

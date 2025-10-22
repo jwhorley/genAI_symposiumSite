@@ -10,29 +10,29 @@ export default function Hero() {
           <div className="mb-8 inline-block">
             <div className="bg-burnt-orange/10 border-2 border-burnt-orange px-6 py-2 rounded-full">
               <p className="text-burnt-orange font-spartan font-bold text-sm tracking-wider uppercase">
-                Spring 2025
+                IFML 5 Year Anniversary
               </p>
             </div>
           </div>
 
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-spartan font-bold text-slate-dark mb-6 leading-tight">
-            Generative AI<br />
-            <span className="text-burnt-orange">Workshop 2025</span>
+            Fall AI Research<br />
+            <span className="text-burnt-orange">Symposium</span>
           </h1>
 
           <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Join researchers, practitioners, and innovators for a deep dive into the latest advances in generative AI technology
+            Celebrating five years of innovation with perspectives on foundation models, diffusion, LLMs, vision, and the future of generative AI
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <div className="flex items-center gap-2 text-slate-dark">
               <Calendar className="w-5 h-5 text-burnt-orange" />
-              <span className="font-medium">Spring 2025</span>
+              <span className="font-medium">November 5, 2025 • 9:30 AM - 5:00 PM CST</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-burnt-orange"></div>
             <div className="flex items-center gap-2 text-slate-dark">
               <MapPin className="w-5 h-5 text-burnt-orange" />
-              <span className="font-medium">Location TBA</span>
+              <span className="font-medium">EER, Austin, TX</span>
             </div>
           </div>
 

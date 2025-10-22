@@ -1,156 +1,99 @@
 import { useState } from 'react';
-import { Clock, MapPin, ChevronDown, ChevronUp, User } from 'lucide-react';
+import { MapPin, ChevronDown, ChevronUp, User } from 'lucide-react';
 
 interface Session {
   time: string;
   title: string;
   speaker?: string;
-  location?: string;
   description: string;
-  type: 'keynote' | 'workshop' | 'panel' | 'break' | 'networking';
+  type: 'keynote' | 'presentation' | 'panel' | 'break';
 }
 
-interface DaySchedule {
-  date: string;
-  sessions: Session[];
-}
-
-const schedule: DaySchedule[] = [
+const schedule: Session[] = [
   {
-    date: 'Day 1 - Opening & Foundations',
-    sessions: [
-      {
-        time: '9:00 AM',
-        title: 'Registration & Welcome Coffee',
-        location: 'Main Hall',
-        description: 'Check-in, networking, and light refreshments',
-        type: 'break',
-      },
-      {
-        time: '10:00 AM',
-        title: 'Opening Keynote: The Future of Generative AI',
-        speaker: 'Dr. Sarah Mitchell',
-        location: 'Auditorium',
-        description: 'Exploring the transformative impact of generative AI across industries and research domains',
-        type: 'keynote',
-      },
-      {
-        time: '11:30 AM',
-        title: 'Foundation Models: Architecture & Training',
-        speaker: 'Prof. James Chen',
-        location: 'Conference Room A',
-        description: 'Deep dive into transformer architectures, training methodologies, and scaling laws',
-        type: 'workshop',
-      },
-      {
-        time: '1:00 PM',
-        title: 'Lunch & Networking',
-        location: 'Courtyard',
-        description: 'Catered lunch with opportunities to connect with fellow attendees',
-        type: 'break',
-      },
-      {
-        time: '2:30 PM',
-        title: 'Hands-on: Prompt Engineering Techniques',
-        speaker: 'Dr. Maria Rodriguez',
-        location: 'Lab 101',
-        description: 'Interactive workshop on effective prompt design, chain-of-thought, and few-shot learning',
-        type: 'workshop',
-      },
-      {
-        time: '4:00 PM',
-        title: 'Panel: Ethics & Responsible AI Development',
-        location: 'Auditorium',
-        description: 'Industry leaders discuss bias, safety, and governance in generative AI systems',
-        type: 'panel',
-      },
-      {
-        time: '5:30 PM',
-        title: 'Evening Reception',
-        location: 'Rooftop Terrace',
-        description: 'Casual networking with drinks and appetizers',
-        type: 'networking',
-      },
-    ],
+    time: '8:30 AM',
+    title: 'Breakfast & Registration',
+    description: 'Welcome coffee, light breakfast, and check-in. Doors open at 8:45 AM.',
+    type: 'break',
   },
   {
-    date: 'Day 2 - Applications & Innovation',
-    sessions: [
-      {
-        time: '9:00 AM',
-        title: 'Morning Coffee & Discussions',
-        location: 'Main Hall',
-        description: 'Informal networking and discussions',
-        type: 'break',
-      },
-      {
-        time: '10:00 AM',
-        title: 'Multimodal AI: Vision, Language, and Beyond',
-        speaker: 'Dr. Alex Thompson',
-        location: 'Auditorium',
-        description: 'Latest advances in models that understand and generate across multiple modalities',
-        type: 'keynote',
-      },
-      {
-        time: '11:30 AM',
-        title: 'Fine-tuning & Domain Adaptation',
-        speaker: 'Dr. Lisa Wang',
-        location: 'Conference Room A',
-        description: 'Practical strategies for adapting foundation models to specific use cases',
-        type: 'workshop',
-      },
-      {
-        time: '1:00 PM',
-        title: 'Lunch & Poster Session',
-        location: 'Exhibition Hall',
-        description: 'Lunch with research poster presentations',
-        type: 'break',
-      },
-      {
-        time: '2:30 PM',
-        title: 'Generative AI in Research & Discovery',
-        speaker: 'Prof. Michael Davis',
-        location: 'Conference Room B',
-        description: 'Applications in scientific research, drug discovery, and materials science',
-        type: 'workshop',
-      },
-      {
-        time: '4:00 PM',
-        title: 'Closing Keynote: AI Agents & Future Directions',
-        speaker: 'Dr. Emily Zhang',
-        location: 'Auditorium',
-        description: 'The evolution toward autonomous AI systems and what comes next',
-        type: 'keynote',
-      },
-      {
-        time: '5:30 PM',
-        title: 'Closing Remarks & Farewell',
-        location: 'Auditorium',
-        description: 'Final thoughts and next steps for continued collaboration',
-        type: 'networking',
-      },
-    ],
+    time: '9:30 AM',
+    title: 'Opening Remarks',
+    speaker: 'Adam Klivans',
+    description: 'Welcome and introduction to the Fall AI Research Symposium celebrating IFML\'s 5 Year Anniversary',
+    type: 'presentation',
+  },
+  {
+    time: '10:00 AM',
+    title: 'Diffusion Models Research',
+    speaker: 'Sanjay Shakkottai',
+    description: 'Deep dive into diffusion models and their applications in generative AI',
+    type: 'presentation',
+  },
+  {
+    time: '11:00 AM',
+    title: 'Research Keynote',
+    speaker: 'Amin Karbasi',
+    description: 'Perspectives on foundation models, optimization, and the future of generative AI',
+    type: 'keynote',
+  },
+  {
+    time: '12:00 PM',
+    title: 'Lunch',
+    description: 'Catered lunch provided for all attendees with networking opportunities',
+    type: 'break',
+  },
+  {
+    time: '1:00 PM',
+    title: 'Deep Proteins Research',
+    speaker: 'Danny Diaz',
+    description: 'Exploring AI applications in protein structure prediction and biological discovery',
+    type: 'presentation',
+  },
+  {
+    time: '2:00 PM',
+    title: 'Vision & Multimodal AI',
+    speaker: 'Kristen Grauman',
+    description: 'Advances in computer vision and multimodal generative AI systems',
+    type: 'presentation',
+  },
+  {
+    time: '3:30 PM',
+    title: 'Keynote Research Presentation',
+    speaker: 'Vahab Mirrokni',
+    description: 'Large language models, fine-tuning strategies, and real-world applications',
+    type: 'keynote',
+  },
+  {
+    time: '4:15 PM',
+    title: 'Panel Discussion: Controversial & Emerging Topics in AI',
+    speaker: 'Moderated by Adam Klivans',
+    description: 'Industry leaders discuss ethics, safety, emerging capabilities, and the future direction of generative AI research',
+    type: 'panel',
+  },
+  {
+    time: '5:00 PM',
+    title: 'Closing Remarks',
+    description: 'Final thoughts and opportunities for continued collaboration',
+    type: 'break',
   },
 ];
 
 const typeColors = {
   keynote: 'bg-navy text-white',
-  workshop: 'bg-burnt-orange text-white',
+  presentation: 'bg-burnt-orange text-white',
   panel: 'bg-green text-white',
   break: 'bg-tan-medium text-slate-dark',
-  networking: 'bg-sky text-white',
 };
 
 const typeLabels = {
   keynote: 'Keynote',
-  workshop: 'Workshop',
+  presentation: 'Research Talk',
   panel: 'Panel Discussion',
   break: 'Break',
-  networking: 'Networking',
 };
 
 export default function Agenda() {
-  const [activeDay, setActiveDay] = useState(0);
   const [expandedSession, setExpandedSession] = useState<number | null>(null);
 
   return (
@@ -159,34 +102,19 @@ export default function Agenda() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-spartan font-bold text-slate-dark mb-4">
-              Conference Agenda
+              Symposium Agenda
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Two days of cutting-edge research, hands-on workshops, and networking opportunities
+              A full day of cutting-edge research presentations, keynotes, and panel discussions
             </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center">
-            {schedule.map((day, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setActiveDay(index);
-                  setExpandedSession(null);
-                }}
-                className={`px-8 py-4 rounded-lg font-spartan font-bold text-lg transition-all duration-300 ${
-                  activeDay === index
-                    ? 'bg-burnt-orange text-white shadow-lg scale-105'
-                    : 'bg-tan-light text-slate-dark hover:bg-tan-medium'
-                }`}
-              >
-                {day.date}
-              </button>
-            ))}
+            <div className="mt-6 inline-flex items-center gap-2 text-slate-dark bg-tan-light px-6 py-3 rounded-lg">
+              <MapPin className="w-5 h-5 text-burnt-orange" />
+              <span className="font-semibold">Engineering Education and Research Center (EER), Austin, TX</span>
+            </div>
           </div>
 
           <div className="space-y-4">
-            {schedule[activeDay].sessions.map((session, index) => (
+            {schedule.map((session, index) => (
               <div
                 key={index}
                 className="bg-white border-2 border-tan-medium rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-burnt-orange"
@@ -213,20 +141,12 @@ export default function Agenda() {
                           </div>
                         </div>
 
-                        <div className="flex flex-wrap gap-4 text-sm text-gray-600">
-                          {session.speaker && (
-                            <div className="flex items-center gap-2">
-                              <User className="w-4 h-4 text-burnt-orange" />
-                              <span>{session.speaker}</span>
-                            </div>
-                          )}
-                          {session.location && (
-                            <div className="flex items-center gap-2">
-                              <MapPin className="w-4 h-4 text-burnt-orange" />
-                              <span>{session.location}</span>
-                            </div>
-                          )}
-                        </div>
+                        {session.speaker && (
+                          <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <User className="w-4 h-4 text-burnt-orange" />
+                            <span>{session.speaker}</span>
+                          </div>
+                        )}
                       </div>
 
                       <div className="flex-shrink-0">

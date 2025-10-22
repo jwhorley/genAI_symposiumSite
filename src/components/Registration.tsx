@@ -3,23 +3,23 @@ import { Ticket, Users, Award, BookOpen } from 'lucide-react';
 const benefits = [
   {
     icon: BookOpen,
-    title: 'Expert Sessions',
-    description: 'Learn from leading researchers and practitioners in generative AI',
+    title: 'Research Keynotes',
+    description: 'Hear from distinguished speakers on the latest advances in generative AI',
   },
   {
     icon: Users,
-    title: 'Networking',
-    description: 'Connect with peers, collaborators, and industry leaders',
+    title: 'Expert Panel',
+    description: 'Engage in discussions on controversial and emerging topics in AI',
   },
   {
     icon: Award,
-    title: 'Hands-on Workshops',
-    description: 'Practical experience with latest tools and techniques',
+    title: 'Meals Included',
+    description: 'Breakfast and lunch provided for all registered attendees',
   },
   {
     icon: Ticket,
-    title: 'Conference Materials',
-    description: 'Access to presentations, code samples, and resources',
+    title: 'Free Event',
+    description: 'No cost to attend - open to all interested researchers and practitioners',
   },
 ];
 
@@ -35,10 +35,10 @@ export default function Registration() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-spartan font-bold text-white mb-4">
-              Join Us This Spring
+              Reserve Your Spot
             </h2>
             <p className="text-lg text-tan-light max-w-2xl mx-auto">
-              Secure your spot at the premier generative AI research conference
+              Free registration for the Fall AI Research Symposium celebrating IFML's 5-year anniversary
             </p>
           </div>
 
@@ -68,39 +68,39 @@ export default function Registration() {
             <div className="text-center mb-8">
               <div className="inline-block bg-burnt-orange/10 px-4 py-2 rounded-full mb-4">
                 <p className="text-burnt-orange font-spartan font-bold text-sm uppercase">
-                  Early Bird Pricing Available
+                  Free Event - Registration Required
                 </p>
               </div>
               <h3 className="text-3xl font-spartan font-bold text-slate-dark mb-4">
                 Register on Eventbrite
               </h3>
               <p className="text-gray-700 leading-relaxed mb-8">
-                Choose from multiple registration tiers including student discounts, academic rates, and industry passes. All registrations include full access to sessions, workshops, and networking events.
+                This is a free event open to all ages. Registration includes full access to all keynotes, research presentations, the panel discussion, plus breakfast and lunch. Paid parking available at EER.
               </p>
             </div>
 
             <div className="space-y-4">
               <a
-                href="https://www.eventbrite.com"
+                href="https://www.eventbrite.com/e/fall-ai-research-symposium-tickets-1855345691909"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group block w-full py-5 bg-burnt-orange text-white font-spartan font-bold text-xl rounded-xl transition-all duration-300 hover:bg-slate-dark hover:shadow-2xl hover:scale-105 text-center relative overflow-hidden"
               >
                 <span className="relative z-10 flex items-center justify-center gap-3">
                   <Ticket className="w-6 h-6" />
-                  View Tickets & Register
+                  Register for Free
                 </span>
                 <div className="absolute inset-0 bg-navy transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
               </a>
 
               <div className="flex flex-col sm:flex-row gap-4 text-sm text-gray-600">
                 <div className="flex-1 bg-tan-light p-4 rounded-lg text-center">
-                  <p className="font-bold text-slate-dark mb-1">Student Rate</p>
-                  <p>Available with valid ID</p>
+                  <p className="font-bold text-slate-dark mb-1">All Ages Welcome</p>
+                  <p>Open to everyone interested</p>
                 </div>
                 <div className="flex-1 bg-tan-light p-4 rounded-lg text-center">
-                  <p className="font-bold text-slate-dark mb-1">Group Discounts</p>
-                  <p>3+ attendees save 15%</p>
+                  <p className="font-bold text-slate-dark mb-1">Parking Available</p>
+                  <p>Paid parking at venue</p>
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function Registration() {
             <div className="mt-8 pt-8 border-t border-tan-medium text-center">
               <p className="text-gray-600 text-sm">
                 Questions about registration?{' '}
-                <a href="mailto:info@genaiworkshop.com" className="text-burnt-orange font-semibold hover:underline">
+                <a href="mailto:info@ifml.institute" className="text-burnt-orange font-semibold hover:underline">
                   Contact us
                 </a>
               </p>
