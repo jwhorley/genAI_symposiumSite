@@ -1,4 +1,4 @@
-import { Mail, Twitter, Linkedin, Github } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12 mb-8">
             <div>
-              <h3 className="font-spartan font-bold text-2xl mb-4 text-burnt-orange">
+              <h3 className="font-spartan font-bold text-2xl mb-4 text-white">
                 Fall AI Research Symposium
               </h3>
               <p className="text-tan-light leading-relaxed">
@@ -31,7 +31,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@ifml.institute" className="text-tan-light hover:text-burnt-orange transition-colors">
+                  <a href="https://ifml.institute/contact" target="_blank" rel="noopener noreferrer" className="text-tan-light hover:text-burnt-orange transition-colors">
                     Contact Us
                   </a>
                 </li>
@@ -42,28 +42,18 @@ export default function Footer() {
               <h4 className="font-spartan font-bold text-lg mb-4">Connect With Us</h4>
               <div className="flex gap-4">
                 <a
-                  href="#"
+                  href="https://x.com/MLFoundations"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
-                  aria-label="Twitter"
+                  aria-label="X (formerly Twitter)"
                 >
-                  <Twitter className="w-5 h-5" />
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
                 </a>
                 <a
-                  href="#"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
-                  aria-label="GitHub"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="mailto:info@ifml.institute"
+                  href="mailto:IFML@austin.utexas.edu"
                   className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
                   aria-label="Email"
                 >
