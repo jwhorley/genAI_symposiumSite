@@ -2,8 +2,12 @@ import { Calendar, MapPin } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-tan-light via-white to-sky/10 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-burnt-orange/5 via-transparent to-navy/5"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/texas-Landscape.png")' }}
+      ></div>
+      <div className="absolute inset-0 bg-white/40"></div>
 
       <div className="absolute top-6 left-6 md:top-10 md:left-10 z-20">
         <img
