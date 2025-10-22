@@ -1,0 +1,85 @@
+import { Mail, Twitter, Linkedin, Github } from 'lucide-react';
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-slate-dark text-white py-12">
+      <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12 mb-8">
+            <div>
+              <h3 className="font-spartan font-bold text-2xl mb-4 text-burnt-orange">
+                Generative AI Workshop
+              </h3>
+              <p className="text-tan-light leading-relaxed">
+                Join us for two days of cutting-edge research, practical workshops, and meaningful connections in the generative AI community.
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-spartan font-bold text-lg mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="#agenda" className="text-tan-light hover:text-burnt-orange transition-colors">
+                    View Agenda
+                  </a>
+                </li>
+                <li>
+                  <a href="#register" className="text-tan-light hover:text-burnt-orange transition-colors">
+                    Register Now
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:info@genaiworkshop.com" className="text-tan-light hover:text-burnt-orange transition-colors">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-spartan font-bold text-lg mb-4">Connect With Us</h4>
+              <div className="flex gap-4">
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
+                  aria-label="Twitter"
+                >
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="#"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="mailto:info@genaiworkshop.com"
+                  className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-burnt-orange transition-all duration-300"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-white/20 pt-8 text-center text-tan-light text-sm">
+            <p>
+              &copy; {currentYear} Generative AI Workshop. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
