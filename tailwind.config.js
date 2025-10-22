@@ -4,8 +4,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        'burnt-orange': '#bf5700',
+        'slate-dark': '#333f48',
         burnt: {
-          orange: '#be5927',
+          orange: '#bf5700',
           brown: '#7d4e3a',
         },
         tan: {
