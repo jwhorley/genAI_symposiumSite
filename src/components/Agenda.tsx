@@ -7,6 +7,8 @@ interface Session {
   speaker?: string;
   description: string;
   type: 'keynote' | 'presentation' | 'panel' | 'break';
+  affiliation?: string;
+  logo?: string;
 }
 
 const schedule: Session[] = [
@@ -22,6 +24,8 @@ const schedule: Session[] = [
     speaker: 'Adam Klivans',
     description: 'Welcome and introduction to the Fall AI Research Symposium celebrating IFML\'s 5 Year Anniversary',
     type: 'presentation',
+    affiliation: 'UT Austin',
+    logo: '/2560px-University_of_Texas_at_Austin_logo.svg.png',
   },
   {
     time: '10:00 AM',
@@ -29,6 +33,8 @@ const schedule: Session[] = [
     speaker: 'Sanjay Shakkottai',
     description: 'Deep dive into diffusion models and their applications in generative AI',
     type: 'presentation',
+    affiliation: 'UT Austin',
+    logo: '/2560px-University_of_Texas_at_Austin_logo.svg.png',
   },
   {
     time: '11:00 AM',
@@ -36,6 +42,8 @@ const schedule: Session[] = [
     speaker: 'Amin Karbasi',
     description: 'Perspectives on foundation models, optimization, and the future of generative AI',
     type: 'keynote',
+    affiliation: 'Cisco Foundation AI',
+    logo: '/black-logo.99bfada1.svg',
   },
   {
     time: '12:00 PM',
@@ -49,6 +57,8 @@ const schedule: Session[] = [
     speaker: 'Danny Diaz',
     description: 'Exploring AI applications in protein structure prediction and biological discovery',
     type: 'presentation',
+    affiliation: 'IFML',
+    logo: '/IFML_wordmark.png',
   },
   {
     time: '2:00 PM',
@@ -56,6 +66,8 @@ const schedule: Session[] = [
     speaker: 'Kristen Grauman',
     description: 'Advances in computer vision and multimodal generative AI systems',
     type: 'presentation',
+    affiliation: 'UT Austin',
+    logo: '/2560px-University_of_Texas_at_Austin_logo.svg.png',
   },
   {
     time: '3:30 PM',
@@ -63,6 +75,8 @@ const schedule: Session[] = [
     speaker: 'Vahab Mirrokni',
     description: 'Large language models, fine-tuning strategies, and real-world applications',
     type: 'keynote',
+    affiliation: 'Google Research',
+    logo: '/google.png',
   },
   {
     time: '4:15 PM',
@@ -70,6 +84,8 @@ const schedule: Session[] = [
     speaker: 'Moderated by Adam Klivans',
     description: 'Industry leaders discuss ethics, safety, emerging capabilities, and the future direction of generative AI research',
     type: 'panel',
+    affiliation: 'IFML',
+    logo: '/IFML_wordmark.png',
   },
   {
     time: '5:00 PM',
@@ -142,9 +158,19 @@ export default function Agenda() {
                         </div>
 
                         {session.speaker && (
-                          <div className="flex items-center gap-2 text-sm text-gray-600">
-                            <User className="w-4 h-4 text-burnt-orange" />
-                            <span>{session.speaker}</span>
+                          <div className="flex items-center justify-between gap-4">
+                            <div className="flex items-center gap-2 text-sm text-gray-600">
+                              <User className="w-4 h-4 text-burnt-orange" />
+                              <span>{session.speaker}</span>
+                            </div>
+                            {session.logo && (
+                              <img
+                                src={session.logo}
+                                alt={session.affiliation}
+                                className="h-8 object-contain"
+                                title={session.affiliation}
+                              />
+                            )}
                           </div>
                         )}
                       </div>
