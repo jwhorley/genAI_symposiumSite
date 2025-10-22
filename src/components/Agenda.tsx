@@ -125,7 +125,7 @@ export default function Agenda() {
             </p>
             <div className="mt-6 inline-flex items-center gap-2 text-slate-dark bg-tan-light px-6 py-3 rounded-lg">
               <MapPin className="w-5 h-5 text-burnt-orange" />
-              <span className="font-semibold">Engineering Education and Research Center (EER), Austin, TX</span>
+              <span className="font-semibold">Mulva Auditorium | Engineering Education and Research Center (EER), Austin, TX</span>
             </div>
           </div>
 
