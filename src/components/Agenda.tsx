@@ -178,13 +178,13 @@ export default function Agenda() {
 
                 {expandedSession === index && (
                   <div className="px-6 pb-6 border-t-2 border-tan-light pt-4">
-                    <div className="flex items-start justify-between gap-4">
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                       <p className="text-gray-700 leading-relaxed flex-grow">{session.description}</p>
                       {session.logo && (
                         <img
                           src={session.logo}
                           alt={session.affiliation}
-                          className={`object-contain flex-shrink-0 ${session.affiliation === 'Cisco Foundation AI' ? 'h-8' : 'h-12'}`}
+                          className="object-contain w-auto max-h-12 max-w-[150px] md:max-w-[200px] mx-auto md:mx-0 flex-shrink-0"
                           title={session.affiliation}
                         />
                       )}
