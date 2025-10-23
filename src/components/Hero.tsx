@@ -1,11 +1,44 @@
+import { useEffect, useRef } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+  const backgroundRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Only enable on desktop (screens wider than 768px)
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+
+    if (mediaQuery.matches && heroRef.current && backgroundRef.current) {
+      gsap.to(backgroundRef.current, {
+        scale: 2.5,
+        transformOrigin: 'center center',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+        },
+      });
+    }
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div
+        ref={backgroundRef}
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("/texas-Landscape.png")' }}
+        style={{ backgroundImage: 'url("/texas-Landscape.png")', willChange: 'transform' }}
       ></div>
       <div className="absolute inset-0 bg-white/40"></div>
 
