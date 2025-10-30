@@ -62,7 +62,7 @@ const schedule: Session[] = [
   },
   {
     time: '2:00 PM',
-    title: 'Vision & Multimodal AI',
+    title: 'Multimodal Human Activity Understanding',
     speaker: 'Kristen Grauman',
     description: 'Advances in computer vision and multimodal generative AI systems',
     type: 'presentation',
