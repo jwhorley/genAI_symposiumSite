@@ -13,13 +13,13 @@ interface Session {
 
 const schedule: Session[] = [
   {
-    time: '8:30 AM',
+    time: '8:30 AM - 9:30 AM',
     title: 'Breakfast & Registration',
     description: 'Welcome coffee, light breakfast, and check-in. Doors open at 8:45 AM.',
     type: 'break',
   },
   {
-    time: '9:30 AM',
+    time: '9:30 AM - 9:45 AM',
     title: 'Opening Remarks',
     speaker: 'Adam Klivans',
     description: 'Welcome and introduction to the Fall AI Research Symposium celebrating IFML\'s 5 Year Anniversary',
@@ -28,7 +28,7 @@ const schedule: Session[] = [
     logo: '/2560px-University_of_Texas_at_Austin_logo.svg.png',
   },
   {
-    time: '10:00 AM',
+    time: '9:45 AM - 10:30 AM',
     title: 'Diffusion Models Research',
     speaker: 'Sanjay Shakkottai',
     description: 'Deep dive into diffusion models and their applications in generative AI',
@@ -37,7 +37,13 @@ const schedule: Session[] = [
     logo: '/2560px-University_of_Texas_at_Austin_logo.svg.png',
   },
   {
-    time: '11:00 AM',
+    time: '10:30 AM - 11:00 AM',
+    title: 'Coffee Break ☕️',
+    description: 'Take a break and enjoy refreshments',
+    type: 'break',
+  },
+  {
+    time: '11:00 AM - 11:55 AM',
     title: 'Research Keynote',
     speaker: 'Amin Karbasi',
     description: 'Perspectives on foundation models, optimization, and the future of generative AI',
@@ -46,13 +52,13 @@ const schedule: Session[] = [
     logo: '/black-logo.99bfada1.svg',
   },
   {
-    time: '12:00 PM',
+    time: '12:00 PM - 1:30 PM',
     title: 'Lunch',
     description: 'Catered lunch provided for all attendees with networking opportunities',
     type: 'break',
   },
   {
-    time: '1:00 PM',
+    time: '1:30 PM - 2:15 PM',
     title: 'Deep Proteins Research',
     speaker: 'Danny Diaz',
     description: 'Exploring AI applications in protein structure prediction and biological discovery',
@@ -61,7 +67,7 @@ const schedule: Session[] = [
     logo: '/IFML_wordmark.png',
   },
   {
-    time: '2:00 PM',
+    time: '2:15 PM - 3:00 PM',
     title: 'Multimodal Human Activity Understanding',
     speaker: 'Kristen Grauman',
     description: 'Advances in computer vision and multimodal generative AI systems',
@@ -70,7 +76,13 @@ const schedule: Session[] = [
     logo: '/2560px-University_of_Texas_at_Austin_logo.svg.png',
   },
   {
-    time: '3:30 PM',
+    time: '3:00 PM - 3:30 PM',
+    title: 'Coffee Break ☕️',
+    description: 'Take a break and enjoy refreshments',
+    type: 'break',
+  },
+  {
+    time: '3:30 PM - 4:15 PM',
     title: 'Keynote Research Presentation',
     speaker: 'Vahab Mirrokni',
     description: 'Large language models, fine-tuning strategies, and real-world applications',
@@ -79,19 +91,13 @@ const schedule: Session[] = [
     logo: '/google.png',
   },
   {
-    time: '4:15 PM',
+    time: '4:15 PM - 5:00 PM',
     title: 'Panel Discussion: Controversial & Emerging Topics in AI',
     speaker: 'Moderated by Adam Klivans',
     description: 'Industry leaders discuss ethics, safety, emerging capabilities, and the future direction of generative AI research',
     type: 'panel',
     affiliation: 'IFML',
     logo: '/IFML_wordmark.png',
-  },
-  {
-    time: '5:00 PM',
-    title: 'Closing Remarks',
-    description: 'Final thoughts and opportunities for continued collaboration',
-    type: 'break',
   },
 ];
 
